@@ -30,7 +30,6 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'All fields are required' }, { status: 400 });
     }
 
-    // Read existing users from the file
     const users = readDataFromFile();
 
     // Check if the email already exists

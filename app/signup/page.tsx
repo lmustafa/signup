@@ -163,7 +163,6 @@ const SignUp = () => {
                 error={!!emailError} // Display error style
                 helperText={emailError} // Display error message
                 aria-describedby={emailError ? "email-error-text" : undefined} // For screen readers
-                
               />
             </Grid2>
             <Grid2 size={{ xs: 12 }}>
