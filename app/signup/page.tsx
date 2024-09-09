@@ -100,7 +100,6 @@ const SignUp = () => {
       } else {
         console.log('Registration successful:', result);
         alert('Registration successful!');
-        // Optionally handle further actions or redirection
       }
     } catch (error) {
       console.error('Error during registration:', error);
@@ -162,7 +161,6 @@ const SignUp = () => {
                 onBlur={handleBlur} // Handle blur event
                 error={!!emailError} // Display error style
                 helperText={emailError} // Display error message
-                aria-describedby={emailError ? "email-error-text" : undefined} // For screen readers
               />
             </Grid2>
             <Grid2 size={{ xs: 12 }}>
