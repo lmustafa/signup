@@ -6,13 +6,21 @@ import path from 'path';
 const dataDir = path.join(process.cwd(), 'data');
 const usersFilePath = path.join(dataDir, 'users.json');
 
+// Ensure the data directory and file exist
+const ensureDataDirectoryAndFileExists = () => {
+  if (!fs.existsSync(dataDir)) {
+    fs.mkdirSync(dataDir);
+  }
+  if (!fs.existsSync(usersFilePath)) {
+    fs.writeFileSync(usersFilePath, JSON.stringify([]), 'utf8');
+  }
+};
+
 // Utility function to read existing data from JSON file
 const readDataFromFile = (): any[] => {
-  if (fs.existsSync(usersFilePath)) {
-    const fileContent = fs.readFileSync(usersFilePath, 'utf8');
-    return JSON.parse(fileContent);
-  }
-  return [];
+  ensureDataDirectoryAndFileExists();
+  const fileContent = fs.readFileSync(usersFilePath, 'utf8');
+  return JSON.parse(fileContent);
 };
 
 // Utility function to write data to JSON file
