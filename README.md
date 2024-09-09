@@ -49,7 +49,7 @@ This URL will display the Sign-Up form, allowing you to interact with and test t
 
   
 
--  **Client-Side Validation**: The SignUp component includes real-time client-side validation to ensure valid inputs before submission. Both the Email and Password fields are validated; the email uses a regular expression, and the password is checked for length. Errors are visually communicated to users, enhancing usability and reducing frustration.
+-  **Client-Side Validation**: The SignUp component features real-time client-side validation to ensure that inputs are valid before submission. The email field is validated using a regular expression, while the password field is checked for length requirements. Any errors are communicated visually to users, improving usability and minimizing frustration. Additionally, the Sign Up button is disabled until all fields are correctly filled, preventing the submission of incomplete data to the server.
 
 -  **Server-Side Validation**: The handleSubmit function checks for server-side errors, such as the existence of a user with the same email, and alerts the user, guiding them to sign in instead.
 
